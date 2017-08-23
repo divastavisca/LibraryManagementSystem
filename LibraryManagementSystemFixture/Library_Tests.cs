@@ -4,7 +4,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace LibraryManagementSystemFixture
 {
     [TestClass]
-    public class UnitTest1
+    public class Library_Tests
     {
         [TestMethod]
         public void TestMethod1()

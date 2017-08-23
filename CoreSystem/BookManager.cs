@@ -65,9 +65,9 @@ namespace CoreSystem
             }
         }
 
-        public BookManager()
+        public BookManager(Library library)
         {
-            _library = new Library();
+            _library = library;
             initializeLog();
         }
     }
