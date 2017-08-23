@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Book.cs" />
+    <Compile Include="BookIssueDetails.cs" />
     <Compile Include="BookManager.cs" />
     <Compile Include="Constants\Genre.cs" />
     <Compile Include="Constants\IssueStatus.cs" />

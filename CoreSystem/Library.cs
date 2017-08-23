@@ -10,11 +10,6 @@ namespace CoreSystem
     {
         private List<Book> _books;
 
-        public bool IsPresent(Book book)
-        {
-            return _books.Contains(book);
-        }
-
         public List<Book> GetAllBooks()
         {
             return _books;
@@ -36,8 +31,7 @@ namespace CoreSystem
         /// <param name="book"></param>
         public void RemoveBook(Book book)
         {
-            if(IsPresent(book))
-                _books.Remove(book);
+             _books.Remove(book);
         }
 
         public Library()

@@ -13,21 +13,41 @@ namespace CoreSystem
         private List<Book> _books;
         private Library _library;
 
-        public Book GetBookById(string id)
+        public Book IssueBookById(string id)
         {
-            if(_bookLog.ContainsKey(id))
+            if(_bookLog.ContainsKey(id)&&IsIssued(id)==false)
             {
                 foreach (Book book in _books)
                     if (book.Id == id)
+                    {
+                        _bookLog[id] = IssueStatus.Issued;
+                        _library.RemoveBook(book); //As book is issued book should be taken from library
                         return book;
+                    }
                     else continue;
             }
-            return null;
+            return Book.Empty;
+        }
+
+        public void BookReturned(Book book)
+        {
+            string id = book.Id;
+            _bookLog[id] = IssueStatus.Available;
+            _library.AddBook(book);
         }
 
         public bool GetBookIdFromTitle(string bookTitle, out string id)
         {
-            throw new NotImplementedException();
+            foreach(Book book in _books)
+            {
+                if(book.Title==bookTitle)
+                {
+                    id = book.Id;
+                    return true;
+                }
+            }
+            id = string.Empty;
+            return false;
         }
 
         public bool IsIssued(string id)

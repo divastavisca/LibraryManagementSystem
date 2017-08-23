@@ -14,6 +14,7 @@ namespace CoreSystem
         public string Publications { get; private set; }
         public List<PersonName> Authors { get; private set; }
         public Genre Genre { get; private set; }
+        public static Book Empty => null;
 
         public Book(string id,string title,string publications,List<PersonName> authors,Genre genre)
         {
