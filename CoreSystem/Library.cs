@@ -15,6 +15,11 @@ namespace CoreSystem
             return _books;
         }
 
+        public bool IsPresent(Book book)
+        {
+            return _books.Contains(book);
+        }
+
         /// <summary>
         /// When a book is returned it should be added to the library
         /// </summary>

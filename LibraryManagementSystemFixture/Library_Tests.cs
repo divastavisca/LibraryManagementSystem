@@ -1,5 +1,6 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using CoreSystem;
 
 namespace LibraryManagementSystemFixture
 {
@@ -9,6 +10,7 @@ namespace LibraryManagementSystemFixture
         [TestMethod]
         public void TestMethod1()
         {
+
         }
     }
 }
